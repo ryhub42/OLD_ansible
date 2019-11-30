@@ -1,4 +1,4 @@
 resource "local_file" "foo" {
-  content     = "a\nb"
+  content     = "${aws_instance.web[0]}\n${aws_instance.web[1]}\n"
   filename = "/home/centos/ansible/hosts"
 }
