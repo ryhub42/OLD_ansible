@@ -1,4 +1,4 @@
-- batchno: 42
+42
   course_name: Devops
   timing; 6AMIST
   trainer_name: Raghu
@@ -9,7 +9,7 @@
     email: dick@gmail.com
     -name: Harry
     email: harry@gmail.com
-- batchno: 41
+41
   course_name: Devops
   timing; 7AMIST
   trainer_name: Raghu
