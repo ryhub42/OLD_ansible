@@ -30,8 +30,15 @@
 - name: Demo on var files 
   hosts: localhost
   vars_files: 
-    var01.yml
+    - var01.yml
   tasks:
     - name: Access Variable 
       debug:
         msg: "URL == {{URL}}"    
+
+- name: Demo on host file variables
+  hosts: all
+  tasks:
+    - name: Access variable
+      debug:
+        msg: "URL == {{URL}}"
