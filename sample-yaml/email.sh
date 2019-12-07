@@ -1,17 +1,17 @@
 #!/bin/bash
 
-read -p 'Enter batch no: ' batchno
-VALUE=$(cat courses.yml | yq . | jq ".b${batchno}")
+read -p 'Enter batch no: ' batch_no
+VALUE=$(cat courses.yml | yq . | jq ".b${batch_no}")
 if [ "$VALUE" = "null" ]; then
   echo "Given batch number doesnot exist"
   exit 1
 fi
 
-NAMES=('cat courses.yml | yq . | jq ".b${batchno}.students[].name"|xargs')
-EMAILS=('cat courses.yml | yq . | jq .b${batchno}.students[].email|xargs')
-TRAINER_NAME=$(cat courses.yml | yq . | jq .b${batchno}.trainer_name|xargs)
-COURSE_NAME=$(cat courses.yml | yq . | jq .b${batchno}.course_name|xargs)
-COURSE_TIME=$(cat courses.yml | yq . | jq ".b${batchno}..timing"|xargs)
+NAMES=('cat courses.yml | yq . | jq ".b${batch_no}.students[].name"|xargs')
+EMAILS=('cat courses.yml | yq . | jq .b${batch_no}.students[].email|xargs')
+TRAINER_NAME=$(cat courses.yml | yq . | jq .b${batch_no}.trainer_name|xargs)
+COURSE_NAME=$(cat courses.yml | yq . | jq .b${batch_no}.course_name|xargs)
+COURSE_TIME=$(cat courses.yml | yq . | jq ".b${batch_no}..timing"|xargs)
 
 VALUE_NO=$(echo ${#NAMES[*]})
 
