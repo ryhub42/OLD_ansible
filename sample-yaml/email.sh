@@ -9,13 +9,13 @@ fi
 
 NAMES=('cat courses.yml | yq . | jq ".b${batchno}.students[].name"|xargs')
 EMAILS=('cat courses.yml | yq . | jq .b${batchno}.students[].email|xargs')
-TRAINER_NAME=$('cat courses.yml | yq . | jq .b${batchno}.students[].trainer_name|xargs')
-COURSE_NAME=$('cat courses.yml | yq . | jq .b${batchno}.students[].course_name|xargs')
-COURSE_TIME=$('cat courses.yml | yq . | jq ".b${batchno}.students[].timing"|xargs')
+TRAINER_NAME=$('cat courses.yml | yq . | jq .b${batchno}.trainer_name|xargs')
+COURSE_NAME=$('cat courses.yml | yq . | jq .b${batchno}.course_name|xargs')
+COURSE_TIME=$('cat courses.yml | yq . | jq ".b${batchno}..timing"|xargs')
 
 VALUE_NO=$(echo ${#NAMES[*]})
 
-while [  $VALUE_NO -gt 0 ]; do
+while [ $VALUE_NO -gt 0 ]; do
   VALUE_NO=$(($VALUE_NO-1))
   echo -e "Hello ${NAMES[$VALUE_NO]}, A new batch of $COURSE_NAME @ $COURSE_TIME by $TRAINER_NAME will being from monday and sending class info to ${EMAILS[$VALUE_NO]}"
 done
