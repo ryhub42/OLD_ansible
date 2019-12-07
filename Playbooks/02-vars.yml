@@ -6,3 +6,12 @@
     - name: Access Variable 
       debug:
         msg: "Helloo from {{URL}}" 
+
+- name: Demo on vars from localhost
+  host: localhost
+  vars:
+    URL: vars.google.com 
+  tasks:
+    - name: Access Variable 
+      debug:
+        msg: "Helloo from {{URL}}" 
