@@ -1,9 +1,9 @@
 b42:
   course_name: Devops
   timing: 6AMIST
-  trainer_name: Raghu
-  students:
-    - name: Tom
+ trainer_name: Raghu
+   students:
+   - name: Tom
       email: tom@gmail.com
     - name: Dick
       email: dick@gmail.com
