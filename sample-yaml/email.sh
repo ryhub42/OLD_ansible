@@ -8,9 +8,9 @@ if [ "$VALUE" = "null" ]; then
 fi
 
 NAMES=('cat courses.yml | yq . | jq ".b${batchno}.students[].name"|xargs')
-EMAILS=('cat courses.yml | yq . | jq ".b${batchno}.students[].email"|xargs')
-TRAINER_NAME=$('cat courses.yml | yq . | jq ".b${batchno}.students[].trainer_name"|xargs')
-COURSE_NAME=$('cat courses.yml | yq . | jq ".b${batchno}.students[].course_name"|xargs')
+EMAILS=('cat courses.yml | yq . | jq .b${batchno}.students[].email|xargs')
+TRAINER_NAME=$('cat courses.yml | yq . | jq .b${batchno}.students[].trainer_name|xargs')
+COURSE_NAME=$('cat courses.yml | yq . | jq .b${batchno}.students[].course_name|xargs')
 COURSE_TIME=$('cat courses.yml | yq . | jq ".b${batchno}.students[].timing"|xargs')
 
 VALUE_NO=$(echo ${#NAMES[*]})
