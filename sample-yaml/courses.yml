@@ -2,7 +2,7 @@
   course_name: Devops
   timing: 6AMIST
   trainer_name: Raghu
-  Students:
+  students:
     -name: Tom
      email: tom@gmail.com
     -name: Dick
@@ -13,7 +13,7 @@
   course_name: Devops
   timing: 7AMIST
   trainer_name: Raghu
-  Students:
+  students:
     -name: John
      email: john@gmail.com
     -name: Smith
