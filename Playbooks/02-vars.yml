@@ -21,6 +21,7 @@
   vars_prompt:
     - name: URL
       prompt: Enter URL
+      private: No
   tasks:
     - name: Access Variable 
       debug:
