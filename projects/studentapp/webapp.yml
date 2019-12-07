@@ -5,4 +5,4 @@
       yum: 
         name: Nginx
         state: present
-        
+        become: yes
