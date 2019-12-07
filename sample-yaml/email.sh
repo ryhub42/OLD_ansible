@@ -7,10 +7,10 @@ if [ $VALUE = "null" ]; then
   exit 1
 fi
 
-NAMES=('cat courses.yml | yq . | jq '.b42.students[].name'|xargs')
-EMAILS=('cat courses.yml | yq . | jq '.b42.students[].email'|xargs')
+##NAMES=('cat courses.yml | yq . | jq '.b42.students[].name'|xargs')
+##EMAILS=('cat courses.yml | yq . | jq '.b42.students[].email'|xargs')
 
-VALUE_NO=$(echo ${#NAMES[*]})
+##VALUE_NO=$(echo ${#NAMES[*]})
 
-while [ \
-\
+##while [ \
+##\
