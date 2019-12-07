@@ -7,11 +7,11 @@ if [ "$VALUE" = "null" ]; then
   exit 1
 fi
 
-NAMES=('cat courses.yml | yq . | jq '.b42.students[].name'|xargs')
-EMAILS=('cat courses.yml | yq . | jq '.b42.students[].email'|xargs')
-trainer_name=$(cat courses.yml | yq . | jq '.b42.trainer_name'|xargs)
-COURSE_NAME=$(cat courses.yml | yq . | jq '.b42.course_name'|xargs)
-COURSE_TIME=$(cat courses.yml | yq . | jq '.b42.course_time'|xargs)
+NAMES=('cat courses.yml | yq . | jq ".b${batchno}.students[].name"|xargs')
+EMAILS=('cat courses.yml | yq . | jq ".b${batchno}.students[].email"|xargs')
+trainer_name=('cat courses.yml | yq . | jq ".b${batchno}.students[].trainer_name"|xargs')
+COURSE_NAME=('cat courses.yml | yq . | jq ".b${batchno}.students[].course_name"|xargs')
+COURSE_TIME=('cat courses.yml | yq . | jq ".b${batchno}.students[].course_time"|xargs')
 
 VALUE_NO=$(echo ${#NAMES[*]})
 
