@@ -2,8 +2,8 @@
 
 read -p 'Enter batch no: ' batchno
 VALUE=$(cat courses.yml | yq . | jq ".b${batchno}")
-if [ $VALUE = "null" ]; then
-  echo "Given batch number doesn't exist"
+if [ "$VALUE" = "null" ]; then
+  echo "Given batch number doesnot exist"
   exit 1
 fi
 
