@@ -1,7 +1,7 @@
 ---
 - name: Play1
-  hosts: all
-  tasks: 
+  hosts: all 
+  tasks:
    - name: Task1 in Play1
       debug:
         msg: "Hello from Task1 of Play1"
