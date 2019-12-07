@@ -9,9 +9,9 @@ fi
 
 NAMES=('cat courses.yml | yq . | jq ".b${batchno}.students[].name"|xargs')
 EMAILS=('cat courses.yml | yq . | jq ".b${batchno}.students[].email"|xargs')
-trainer_name=('cat courses.yml | yq . | jq ".b${batchno}.students[].trainer_name"|xargs')
-COURSE_NAME=('cat courses.yml | yq . | jq ".b${batchno}.students[].course_name"|xargs')
-COURSE_TIME=('cat courses.yml | yq . | jq ".b${batchno}.students[].course_time"|xargs')
+trainer_name=$('cat courses.yml | yq . | jq ".b${batchno}.students[].trainer_name"|xargs')
+COURSE_NAME=$('cat courses.yml | yq . | jq ".b${batchno}.students[].course_name"|xargs')
+COURSE_TIME=$('cat courses.yml | yq . | jq ".b${batchno}.students[].course_time"|xargs')
 
 VALUE_NO=$(echo ${#NAMES[*]})
 
