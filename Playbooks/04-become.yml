@@ -5,6 +5,7 @@
     - name: Get id of a user
       shell: id
       register: out
+      become: yes
 
     - name: Print output
       debug:

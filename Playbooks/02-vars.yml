@@ -16,6 +16,11 @@
       vars:
         URL: task.google.com
 
+## Note:
+## 1. Vars can be given on tasks
+## 2. Task vars will override the play vars
+
+
 
 - name: Demo on vars from localhost
   hosts: localhost
