@@ -14,5 +14,5 @@ VALUE_NO=$(echo ${#NAMES[*]})
 
 while [  $VALUE_NO -gt 0 ]; do
   VALUE_NO=$(($VALUE_NO-1))
-  echo -e "Hello ${NAMES{$VALUE_NO}}, I am sending class info to ${EMAILS[$VALUE_NO]}"
+  echo -e "Hello ${NAMES[$VALUE_NO]}, I am sending class info to ${EMAILS[$VALUE_NO]}"
 done
