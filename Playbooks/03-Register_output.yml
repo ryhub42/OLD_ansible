@@ -2,7 +2,7 @@
   hosts: all
   tasks:
     - name: Run shell command
-      shell: Uptime
+      shell: uptime
       register: out
 
     - name: Print uptime
