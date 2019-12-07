@@ -1,8 +1,9 @@
 - name: Install webserver and configure
   hosts: all
+  become: yes
   tasks: 
     - name: Install Nginx Server
       yum: 
         name: Nginx
         state: present
-        become: yes
+        
