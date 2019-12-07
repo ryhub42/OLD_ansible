@@ -30,7 +30,7 @@
 - name: Demo on var files 
   hosts: localhost
   vars_files: 
-    -var01.yml
+    var01.yml
   tasks:
     - name: Access Variable 
       debug:
