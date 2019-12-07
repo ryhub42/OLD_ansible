@@ -25,4 +25,13 @@
   tasks:
     - name: Access Variable 
       debug:
-        msg: "Helloo from {{URL}}"      
+        msg: "Helloo from {{URL}}"     
+
+- name: Demo on var files 
+  hosts: localhost
+  vars_files: 
+    -var01.yml
+  tasks:
+    - name: Access Variable 
+      debug:
+        msg: "URL == {{URL}}"    
