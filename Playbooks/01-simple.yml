@@ -1,15 +1,15 @@
 ---
 - name: Play1 
-  hosts: all
+  hosts: all 
   tasks:
-    - name: Task1 in Play1
+    - name: Task1 in Play1 
       debug:
         msg: "Hello from Task1 of Play1"
 
 - name: Play2 
   hosts: all
   tasks:
-    - name: Task1 in Play2
+    - name: Task1 in Play2 
       debug:
-        msg: "Hello from Task1 of Play2"        
+        msg: "Hello from Task1 of Play2"
 ...

@@ -1,0 +1,8 @@
+- name: Demo on vars 
+  hosts: all 
+  vars:
+    URL: vars.google.com 
+  tasks:
+    - name: Access Variable 
+      debug:
+        msg: "Helloo from {{URL}}" 
