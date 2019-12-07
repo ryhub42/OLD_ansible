@@ -8,7 +8,7 @@
         msg: "Helloo from {{URL}}" 
 
 - name: Demo on vars from localhost
-  host: localhost
+  hosts: localhost
   vars:
     URL: vars.google.com 
   tasks:
