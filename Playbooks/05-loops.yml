@@ -1,0 +1,11 @@
+- name: Loop a task
+  hosts: all
+  tasks: 
+    - name: Print Loop Values
+      debug: 
+        msg: "Course Name = {{item}}"
+      loop: 
+        - Devops
+        - AWS
+
+
