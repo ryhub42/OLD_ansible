@@ -1,0 +1,8 @@
+- name: Filters
+  hosts: all
+  vars: 
+    URL: http://us.mirrors.quenda.co/apache//httpd/httpd-2.4.41.tar.bz2
+  tasks:
+    - name: Apply Filter
+      debug:
+        msg: "{{URL | urlsplit }}"
