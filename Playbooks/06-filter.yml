@@ -5,4 +5,4 @@
   tasks:
     - name: Apply Filter
       debug:
-        msg: "{{URL | urlsplit }}"
+        msg: "{{URL | urlsplit('hostname') }}"
