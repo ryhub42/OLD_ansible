@@ -7,8 +7,8 @@
 
     - name: set fact
       set_fact:
-      USER_ID: "{{out.stdout}}"
+        USER_ID: "{{out.stdout}}"
     
     - name: Print user_id
       debug:
-      msg: User ID = {{USER_ID}}
+        msg: User ID = {{USER_ID}}
