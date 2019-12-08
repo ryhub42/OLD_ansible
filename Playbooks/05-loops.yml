@@ -8,4 +8,13 @@
         - Devops
         - AWS
 
+- name: Loop a task
+  hosts: all
+  tasks: 
+    - name: Print Loop Values
+      debug: 
+        msg: "Course Name = {{item}} and Trainer_name = {{item.trainer_name}}"
+      loop: 
+        - { course_name : "Devops", trainer_name: "Raju"}
+        - { course_name : "AWS", trainer_name : "Rob"}
 
