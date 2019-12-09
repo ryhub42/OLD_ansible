@@ -11,7 +11,7 @@
 
     - name: Copy a template file
       template:
-        src: nginx.conf.j2
+        src: nginx.conf
         dest: /etc/nginx/nginx.conf
         vars: 
           URL: google.com
