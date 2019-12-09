@@ -9,7 +9,7 @@
 
 ## After installing nginx, we want to update the config by directly copying the config from Ansible server to node
 
-    - name: Copy a file
+    - name: Copy a template file
       template:
         src: nginx.conf.j2
         dest: /etc/nginx/nginx.conf
