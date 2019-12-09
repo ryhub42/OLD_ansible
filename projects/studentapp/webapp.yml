@@ -1,9 +1,16 @@
 - name: Install webserver and configure
   hosts: all
   become: yes
+  vars: 
+    HTDOCS_DIR: /usr/share/nginx/html/
   tasks: 
     - name: Install Nginx Server
       yum: 
         name: nginx
         state: present
-        
+    - name: Find files in htdocs
+      find:
+        paths: "{{HTDOCS_DIR}}"
+        register: out
+    - debug:
+      msg: "{{OUT}}"
