@@ -30,5 +30,5 @@
     - name: Start Service
       service: 
         name: nginx
-        state: Started
+        state: started
         enabled: yes
