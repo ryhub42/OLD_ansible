@@ -1,0 +1,22 @@
+- name: Copy a config file with template
+  hosts: all
+  become: yes
+  tasks: 
+    - name: install nginx server
+      yum:
+        name: nginx
+        state: installed
+
+## After installing nginx, we want to update the config by directly copying the config from Ansible server to node
+
+    - name: Copy a file
+      template:
+        src: nginx.conf.j2
+        dest: /etc/nginx/nginx.conf
+        vars: 
+          URL: google.com
+
+    - name: Restart nginx
+      service: 
+        name: nginx
+        state: restarted
