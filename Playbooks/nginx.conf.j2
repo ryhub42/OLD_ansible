@@ -47,9 +47,11 @@ http {
         location / {
         }
 
-        location /student {
-          proxy_pass http://{{ansible_default_ipv4.address}}:8080/student;
+        {% for ext in exts %}
+        location /{{ext}} {
+          proxy_pass http://{{ansible_default_ipv4.address}}:8080/{ext};
         }
+        {% endfor %}
 
 
         error_page 404 /404.html;
