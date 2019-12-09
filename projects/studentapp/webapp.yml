@@ -13,5 +13,8 @@
         paths: "{{HTDOCS_DIR}}"
         file_type: any
       register: out
-    - debug:
-        msg: "{{out}}"
+    - name: Remove all nginx default htdocs
+      file: 
+        path: "{{item.path}}"
+        state: absent
+      loops: "{{out.files}}"
