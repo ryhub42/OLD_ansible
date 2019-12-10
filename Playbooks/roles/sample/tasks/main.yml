@@ -4,4 +4,4 @@
 
 - name: Print directory
   debug:
-    msg: "{{TOMCAT_URL | urlsplit }}" 
+    msg: "{{TOMCAT_URL.split('/') }}" 
