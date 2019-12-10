@@ -8,11 +8,9 @@
     name: java
     state: installed
 
-- name: Print ID
-  shell: id
-  register: out
-  become_user: "{{APP_USER}}"
-
-- name: Print ID
-  debug: 
-    msg: "ID = {{out.stdout}}"
+- name: Download Tomcat
+  unarchive: 
+    src: "{{TOMCAT_URL}}"
+    dest: "{{APP_HOME}}"
+    remote_src: yes
+ 
