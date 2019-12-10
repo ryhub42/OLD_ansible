@@ -20,11 +20,11 @@
     url: "{{WAR_URL}}"
     dest: "{{TOMCAT_HOME}}/webapps/student.war"
   become_user: "{{APP_USER}}"
-    
+
 - name: Download a jar file
   get_url: 
     url: "{{JDBC_JAR_URL}}"
-    dest: "{{TOMCAT_HOME}}/lib/student.war"
+    dest: "{{TOMCAT_HOME}}/lib/mysql-connector.jar"
   become_user: "{{APP_USER}}"
 
 - name: Copy TOMCAT configuration
@@ -46,3 +46,4 @@
   service: 
     name: tomcat
     state: restarted
+    enabled: yes
