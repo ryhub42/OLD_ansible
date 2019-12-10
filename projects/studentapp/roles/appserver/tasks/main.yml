@@ -19,7 +19,8 @@
   get_url: 
     url: "{{WAR_URL}}"
     dest: "{{TOMCAT_HOME}}/webapps/student.war"
-
+  become_user: "{{APP_USER}}"
+    
 - name: Download a jar file
   get_url: 
     url: "{{JDBC_JAR_URL}}"
