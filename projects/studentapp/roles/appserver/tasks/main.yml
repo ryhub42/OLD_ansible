@@ -1,0 +1,17 @@
+- name: Add application user
+  user: 
+    name: "{{APP_USER}}"
+    comment: "Student Project Application User"
+
+- name: Install Java
+  yum:
+    name: Java
+    state: installed
+
+- name: Print ID
+  shell: id
+  register: out
+
+- name: Print ID
+  debug: 
+    msg: "ID = {{out.stdout}}"
