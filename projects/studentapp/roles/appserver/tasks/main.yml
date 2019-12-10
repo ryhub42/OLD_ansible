@@ -31,3 +31,17 @@
     src: "context.xml.j2"
     dest: "{{TOMCAT_HOME}}/conf/context.xml"
   become_user: "{{APP_USER}}"
+
+- name: Download Tomcat systemd script
+  get_url:
+    url: "{{TOMCAT_SYSTEMD_SCRIPT}}"
+    dest: /etc/init.d/tomcat
+    mode: 755
+
+- name: Reload systemd
+  shell: systemctl daemon-reload
+
+- name: Start Tomcat
+  service: 
+    name: tomcat
+    service: restart
