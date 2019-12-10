@@ -1,7 +1,1 @@
 TOMCAT_URL: "https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.47/bin/apache-tomcat-8.5.47.tar.gz"
-debug: 
-  msg: "Hello from Sample Role"
-
-- name: Print directory
-  debug:
-    msg: "{{TOMCAT_URL | urlsplit }}" 
