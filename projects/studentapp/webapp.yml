@@ -1,6 +1,7 @@
 - name: Install webserver and configure
   hosts: all
   become: yes
+  gather_facts: yes
   roles:
     - webserver
     - appserver
