@@ -44,4 +44,4 @@
 - name: Start Tomcat
   service: 
     name: tomcat
-    service: restart
+    state: restarted
