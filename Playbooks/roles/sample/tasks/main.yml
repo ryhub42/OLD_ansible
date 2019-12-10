@@ -4,5 +4,4 @@
 
 - name: Print directory
   debug:
-    msg: "{{TOMCAT_URL.split('/') | last }}" 
-    
+    msg: "{{ TAR_FILE | REGEX_REPLACE('.tar.gz') }}" 
