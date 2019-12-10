@@ -3,14 +3,13 @@
   yum:
     name: nginx 
     state: present 
-  notify: Restart HTTPD
-    
+      
 - name: Find files in htdocs 
   find:
     paths: "{{HTDOCS_DIR}}"
     file_type: any 
   register: out 
-  
+
 - name: Remove all nginx default htdocs 
   file:
     path: "{{item.path}}"
@@ -27,8 +26,7 @@
   copy:
     src: nginx.conf 
     dest: /etc/nginx/nginx.conf 
-  notify: Restart HTTPD
-
+ 
 - name: Start Service 
   service:
     name: nginx 
