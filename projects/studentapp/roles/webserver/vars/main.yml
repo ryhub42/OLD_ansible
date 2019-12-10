@@ -1,0 +1,2 @@
+vars: 
+    HTDOCS_DIR: /usr/share/nginx/html/
