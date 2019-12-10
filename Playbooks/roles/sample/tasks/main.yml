@@ -4,4 +4,4 @@
 
 - name: Print directory
   debug:
-    msg: "{{ TAR_FILE | REGEX_REPLACE('.tar.gz') }}" 
+    msg: "{{ TAR_FILE | regex_replace('.tar.gz') }}" 
