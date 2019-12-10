@@ -5,7 +5,7 @@
 
 - name: Install Java
   yum:
-    name: Java
+    name: java
     state: installed
 
 - name: Print ID
