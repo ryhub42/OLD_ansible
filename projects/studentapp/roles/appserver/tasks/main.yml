@@ -25,3 +25,9 @@
     url: "{{JDBC_JAR_URL}}"
     dest: "{{TOMCAT_HOME}}/lib/student.war"
   become_user: "{{APP_USER}}"
+
+- name: Copy TOMCAT configuration
+  template: 
+    src: "context.xml.j2"
+    dest: "{{TOMCAT_HOME}}/conf/context.xml"
+  become_user: "{{APP_USER}}"
