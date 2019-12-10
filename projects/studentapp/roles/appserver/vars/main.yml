@@ -1,7 +1,7 @@
 APP_USER: student
 APP_HOME: /home/{{APP_USER}}
 TOMCAT_URL: "https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.47/bin/apache-tomcat-8.5.47.tar.gz"
-TAR_FILE: "{{ TAR_FILE | regex_replace('.tar.gz') }}" 
+TAR_FILE: "{{TOMCAT_URL.split('/') | last }}" 
 TAR_DIR: "{{ TAR_FILE | regex_replace('.tar.gz') }}" 
 TOMCAT_HOME: "{{APP_HOME}}/{{TAR_DIR}}"
 
