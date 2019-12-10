@@ -1,3 +1,7 @@
 - name: Print Hello
   debug:
     msg: "Hello from Sample Role"
+
+- name: Print directory
+  debug:
+    msg: "{{TOMCAT_URL | urlsplit }}" 
