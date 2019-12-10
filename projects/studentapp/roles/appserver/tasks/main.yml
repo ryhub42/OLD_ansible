@@ -11,6 +11,7 @@
 - name: Print ID
   shell: id
   register: out
+  become_user: "{{APP_USER}}"
 
 - name: Print ID
   debug: 
