@@ -1,4 +1,6 @@
 - name: Role Dependencies
   hosts: all
+  vars: 
+    URL: play.google.com
   roles: 
-    - roleB
+    - roleA
