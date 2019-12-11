@@ -1,0 +1,4 @@
+- name: Demo on conditionals
+  hosts: all
+  roles:
+    - httpd

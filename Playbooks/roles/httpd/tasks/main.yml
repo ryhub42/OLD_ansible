@@ -1,0 +1,10 @@
+- name: Install webserver on Centos
+  yum: 
+    name: httpd
+    state: installed
+
+- name: Install webserver on Ubuntu
+  apt:
+    name: apache2
+    state: installed
+
