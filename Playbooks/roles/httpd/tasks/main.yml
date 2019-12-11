@@ -2,9 +2,11 @@
   yum: 
     name: httpd
     state: installed
+  when: ansible_pkg_mgr == "yum"
 
 - name: Install webserver on Ubuntu
   apt:
     name: apache2
     state: installed
+  when: ansible_pkg_mgr == "apt"
 
